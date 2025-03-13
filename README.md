@@ -13,12 +13,17 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## Mise en place des dossiers
 
-src/
-|-- assets
-|-- components
-|-- hooks
-|-- pages
-|-- services
-|-- styles
-| |-- App.css
-| |-- index.css
+```
+└── 📁src
+    └── 📁assets
+        └── react.svg
+    └── 📁components
+    └── 📁hooks
+    └── 📁pages
+    └── 📁services
+    └── 📁styles
+        └── App.css
+        └── index.css
+    └── App.jsx
+    └── main.jsx
+```
