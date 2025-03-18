@@ -1,0 +1,40 @@
+.main__profil-section {
+    margin-left: 116px;
+    margin-top: 68px;
+}
+
+.main__profil-wrapper {
+    margin-inline: 88px;
+}
+
+.main__profil-wrapper__hello-section__user-name {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 24px;
+}
+
+.main__profil-wrapper__hello-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main__profil-wrapper__hello-section__user-name span {
+    color: red;
+}
+
+.main__profil-wrapper__hello-section__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.main__profil-wrapper__no-connection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-38%, 38%);
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 24px;
+}
