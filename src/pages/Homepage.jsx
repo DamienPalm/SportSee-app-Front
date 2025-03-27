@@ -1,5 +1,14 @@
+import Navbar from "../components/Navbar";
+
 function Homepage() {
-  return <div>Hello World</div>;
+  return (
+    <>
+      <header className="header">
+        <Navbar />
+      </header>
+      <main className="main"></main>
+    </>
+  );
 }
 
 export default Homepage;

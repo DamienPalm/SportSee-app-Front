@@ -1,0 +1,24 @@
+.header__navbar {
+    display: flex;
+    background-color: #020203;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header__navbar__logo {
+    margin-block: 12px;
+    margin-left: 24px;
+}
+
+.header__navbar__menu {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__navbar__menu__link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    color: white;
+}
