@@ -28,3 +28,7 @@
     font-size: 18px;
     line-height: 24px;
 }
+
+.main__profilSection__profilWrapper__cardWrapper {
+    margin-top: 32px;
+}
