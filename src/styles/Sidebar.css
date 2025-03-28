@@ -1,0 +1,28 @@
+.main__sidebar {
+    position: fixed;
+    width: 116px;
+    height: calc(100vh - 85px);
+    background-color: #020203;
+}
+
+.main__sidebar__buttonWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main__sidebar__copyright {
+    position: absolute;
+    transform: rotate(-90deg);
+    bottom: 84px;
+    left: -4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    color: white;
+    width: max-content;
+}

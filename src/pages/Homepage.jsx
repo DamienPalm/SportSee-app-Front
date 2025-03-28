@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 
 function Homepage() {
   return (
@@ -6,7 +7,9 @@ function Homepage() {
       <header className="header">
         <Navbar />
       </header>
-      <main className="main"></main>
+      <main className="main">
+        <Sidebar />
+      </main>
     </>
   );
 }
