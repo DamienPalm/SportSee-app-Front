@@ -30,5 +30,7 @@
 }
 
 .main__profilSection__profilWrapper__cardWrapper {
+    display: flex;
+    gap: 32px;
     margin-top: 32px;
 }
