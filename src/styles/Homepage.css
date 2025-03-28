@@ -1,0 +1,30 @@
+.main__profilSection {
+    margin-left: 116px;
+    padding-top: 68px;
+}
+
+.main__profilSection__profilWrapper {
+    margin-inline: 88px;
+}
+
+.main__profilSection__profilWrapper__helloSection {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main__profilSection__profilWrapper__helloSection__userName {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 24px;
+}
+
+.main__profilSection__profilWrapper__helloSection__userName span {
+    color: red;
+}
+
+.main__profilSection__profilWrapper__helloSection__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
