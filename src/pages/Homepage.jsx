@@ -3,13 +3,17 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { useUserData } from "../hooks/useUserData";
 import "../styles/Homepage.css";
+import ActivityBarChart from "../components/ActivityBarChart";
+import { useUserActivity } from "../hooks/useUserActivity";
 
 function Homepage() {
   const [userId] = useState(18);
   const { userData, loading, error } = useUserData(userId);
   console.log(userData, loading, error);
+  const { userActivity } = useUserActivity(userId);
 
   const firstName = userData?.data?.userInfos?.firstName;
+  const activity = userActivity?.data?.sessions;
 
   return (
     <>
@@ -28,6 +32,7 @@ function Homepage() {
                 Félicitation vous avez explosé vos objectifs hier 👏
               </p>
             </div>
+            <ActivityBarChart data={activity} />
           </section>
         </main>
       </main>

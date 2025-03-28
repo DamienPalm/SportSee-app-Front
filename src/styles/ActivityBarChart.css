@@ -1,0 +1,32 @@
+.main__profilSection__profilWrapper__activityBarChart {
+    position: relative;
+    width: 832px;
+    height: 320px;
+    background-color: #fbfbfb;
+}
+
+.main__profilSection__profilWrapper__activityBaraChart__title {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.customTooltip {
+    background-color: #e60000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 36px;
+    height: 60px;
+}
+
+.customTooltip__payload {
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 24px;
+    color: white;
+}
