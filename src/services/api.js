@@ -17,7 +17,7 @@ export async function fetchUserActivity(userId) {
     return response.json();
   }
 }
-export async function fetchUserAverageSession(userId) {
+export async function fetchUserAverageSessions(userId) {
   const response = await fetch(
     `http;//localhost:3000/user/${userId}/average-sessions`
   );
