@@ -1,5 +1,5 @@
 export async function fetchUserData(userId) {
-  const response = await fetch(`http;//localhost:3000/user/${userId}`);
+  const response = await fetch(`http://localhost:3000/user/${userId}`);
   if (!response.ok) {
     throw new Error("Erreur lors de la récupération des données utilisateurs");
   } else {
@@ -8,7 +8,7 @@ export async function fetchUserData(userId) {
 }
 
 export async function fetchUserActivity(userId) {
-  const response = await fetch(`http;//localhost:3000/user/${userId}/activity`);
+  const response = await fetch(`http://localhost:3000/user/${userId}/activity`);
   if (!response.ok) {
     throw new Error(
       "Erreur lors de la récupération des données de l'activité des utilisateurs"
@@ -19,7 +19,7 @@ export async function fetchUserActivity(userId) {
 }
 export async function fetchUserAverageSessions(userId) {
   const response = await fetch(
-    `http;//localhost:3000/user/${userId}/average-sessions`
+    `http://localhost:3000/user/${userId}/average-sessions`
   );
   if (!response.ok) {
     throw new Error(
