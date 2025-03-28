@@ -34,3 +34,9 @@ Mise en place de la structure des fichiers
     └── App.jsx
     └── main.jsx
 ```
+
+## Installation de la librairie Recharts
+
+```
+npm install recharts
+```
