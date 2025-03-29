@@ -13,9 +13,13 @@ import {
 function CustomizedTooltip({ active, payload }) {
   if (active && payload && payload.length) {
     return (
-      <div className="customTooltip">
-        <p className="customTooltip__payload">{payload[0].value + "kg"}</p>
-        <p className="customTooltip__payload">{payload[1].value + "Kcal"}</p>
+      <div className="activityBarChartTooltip">
+        <p className="activityBarChartTooltip__payload">
+          {payload[0].value + "kg"}
+        </p>
+        <p className="activityBarChartTooltip__payload">
+          {payload[1].value + "Kcal"}
+        </p>
       </div>
     );
   } else {
