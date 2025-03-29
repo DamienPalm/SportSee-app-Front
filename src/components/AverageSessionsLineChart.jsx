@@ -39,8 +39,10 @@ function CustomTickFormatter(day) {
 function CustomizedTooltip({ active, payload }) {
   if (active && payload && payload.length) {
     return (
-      <div className="customTooltip">
-        <p className="customTooltip__payload">{payload[0].value + "min"}</p>
+      <div className="averageSessionsTooltip">
+        <p className="averageSessionsTooltip__payload">
+          {payload[0].value + " " + "min"}
+        </p>
       </div>
     );
   } else {
