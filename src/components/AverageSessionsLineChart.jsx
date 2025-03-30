@@ -2,6 +2,7 @@ import "../styles/AverageSessionsLineChart.css";
 import {
   Line,
   LineChart,
+  Rectangle,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -50,6 +51,22 @@ function CustomizedTooltip({ active, payload }) {
   }
 }
 
+function CustomizedCursor(props) {
+  const { points, width, height } = props;
+  const { x, y } = points[0];
+  console.log(props);
+  return (
+    <Rectangle
+      fill="rgba(120, 0, 0, 0.6)"
+      stroke="rgba(120, 0, 0, 0.6)"
+      x={x}
+      y={y}
+      width={width}
+      height={height}
+    />
+  );
+}
+
 function AverageSessionsLineChart({ data }) {
   return (
     <div className="main__profilSection__profilWrapper__averageSessionsLineChart">
@@ -65,7 +82,7 @@ function AverageSessionsLineChart({ data }) {
             dataKey="day"
             axisLine={false}
             tickLine={false}
-            tickFormatter={CustomTickFormatter}
+            tickFormatter={<CustomTickFormatter />}
             tick={{ fill: "white" }}
             padding={{ left: 20, right: 20 }}
           />
@@ -82,7 +99,7 @@ function AverageSessionsLineChart({ data }) {
             }}
             dot={false}
           />
-          <Tooltip content={CustomizedTooltip} />
+          <Tooltip content={CustomizedTooltip} cursor={<CustomizedCursor />} />
         </LineChart>
       </ResponsiveContainer>
     </div>
