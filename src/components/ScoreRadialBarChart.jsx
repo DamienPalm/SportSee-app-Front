@@ -6,7 +6,6 @@ function ScoreRadialBarChart({ userData }) {
     ? userData?.data?.todayScore
     : userData?.data?.score;
   const scoreData = [{ name: "score", value: score }];
-  console.log(scoreData);
 
   return (
     <>
@@ -16,26 +15,21 @@ function ScoreRadialBarChart({ userData }) {
         </h2>
         <ResponsiveContainer width="100%" height="100%">
           <RadialBarChart
-            innerRadius="80%"
+            innerRadius="75%"
             outerRadius="100%"
             data={scoreData}
             startAngle={90}
             endAngle={450}
+            barSize={20}
             margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
           >
             <RadialBar
               data={[{ value: 1 }]}
               dataKey="value"
-              barSize={170}
               fill="white"
               isAnimationActive={false}
             />
-            <RadialBar
-              dataKey="value"
-              fill="#ff0000"
-              barSize={10}
-              cornerRadius={100}
-            />
+            <RadialBar dataKey="value" fill="#ff0000" cornerRadius={100} />
           </RadialBarChart>
         </ResponsiveContainer>
         <div className="main__profilSection__profilWrapper__scoreRadialBarChart__score">
