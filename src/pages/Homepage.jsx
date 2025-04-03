@@ -10,6 +10,11 @@ import { useUserAverageSessions } from "../hooks/useUserAverageSessions";
 import PerformanceRadarChart from "../components/PerformanceRadarChat";
 import { useUserPerformance } from "../hooks/useUserPerformance";
 import ScoreRadialBarChart from "../components/ScoreRadialBarChart";
+import Card from "../components/Card";
+import calorieIcon from "../assets/img/calories-icon.svg";
+import proteinIcon from "../assets/img/protein-icon.svg";
+import carbIcon from "../assets/img/carbs-icon.svg";
+import lipidIcon from "../assets/img/fat-icon.svg";
 
 function Homepage() {
   const [userId] = useState(18);
@@ -31,20 +36,52 @@ function Homepage() {
       <main className="main">
         <Sidebar />
         <main className="main__profilSection">
+          <div className="main__profilSection__helloSection">
+            <h1 className="main__profilSection__helloSection__userName">
+              Bonjour <span>{firstName}</span>
+            </h1>
+            <p className="main__profilSection__helloSection__description">
+              Félicitation vous avez explosé vos objectifs hier 👏
+            </p>
+          </div>
           <section className="main__profilSection__profilWrapper">
-            <div className="main__profilSection__profilWrapper__helloSection">
-              <h1 className="main__profilSection__profilWrapper__helloSection__userName">
-                Bonjour <span>{firstName}</span>
-              </h1>
-              <p className="main__profilSection__profilWrapper__helloSection__description">
-                Félicitation vous avez explosé vos objectifs hier 👏
-              </p>
-            </div>
-            <ActivityBarChart data={activity} />
-            <section className="main__profilSection__profilWrapper__cardWrapper">
-              <AverageSessionsLineChart data={averageSessions} />
-              <PerformanceRadarChart data={performance} />
-              <ScoreRadialBarChart userData={userData} />
+            <section className="main__profilSection__profilWrapper__chart">
+              <ActivityBarChart data={activity} />
+              <section className="main__profilSection__profilWrapper__chart__cardWrapper">
+                <AverageSessionsLineChart data={averageSessions} />
+                <PerformanceRadarChart data={performance} />
+                <ScoreRadialBarChart userData={userData} />
+              </section>
+            </section>
+            <section className="main__profilSection__profilWrapper__cardKeyDataWrapper">
+              <Card
+                data={userData?.data?.keyData?.calorieCount}
+                icon={calorieIcon}
+                alt="icone flamme"
+                name="Calories"
+                unit="Kcal"
+              />
+              <Card
+                data={userData?.data?.keyData?.proteinCount}
+                icon={proteinIcon}
+                alt="icone cuisse de poulet"
+                name="Proteines"
+                unit="g"
+              />
+              <Card
+                data={userData?.data?.keyData?.carbohydrateCount}
+                icon={carbIcon}
+                alt="icone pomme"
+                name="Glucides"
+                unit="g"
+              />
+              <Card
+                data={userData?.data?.keyData?.lipidCount}
+                icon={lipidIcon}
+                alt="icone burger"
+                name="Lipides"
+                unit="g"
+              />
             </section>
           </section>
         </main>
