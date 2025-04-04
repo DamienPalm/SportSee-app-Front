@@ -32,7 +32,7 @@ export async function fetchUserAverageSessions(userId) {
 
 export async function fetchUserPerformance(userId) {
   const response = await fetch(
-    `http;//localhost:3000/user/${userId}/performance`
+    `http://localhost:3000/user/${userId}/performance`
   );
   if (!response.ok) {
     throw new Error(

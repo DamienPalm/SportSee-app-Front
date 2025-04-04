@@ -7,7 +7,7 @@ import ActivityBarChart from "../components/ActivityBarChart";
 import { useUserActivity } from "../hooks/useUserActivity";
 import AverageSessionsLineChart from "../components/AverageSessionsLineChart";
 import { useUserAverageSessions } from "../hooks/useUserAverageSessions";
-import PerformanceRadarChart from "../components/PerformanceRadarChat";
+import PerformanceRadarChart from "../components/PerformanceRadarChart";
 import { useUserPerformance } from "../hooks/useUserPerformance";
 import ScoreRadialBarChart from "../components/ScoreRadialBarChart";
 import Card from "../components/Card";
@@ -26,7 +26,14 @@ function Homepage() {
   const firstName = userData?.data?.userInfos?.firstName;
   const activity = userActivity?.data?.sessions;
   const averageSessions = userAverageSessions?.data?.sessions;
-  const performance = userPerformance?.data?.value;
+  const performanceData = userPerformance?.data?.data;
+  const kindMapping = userPerformance?.data?.kind;
+
+  const formattedPerformance = performanceData?.map((item) => ({
+    ...item,
+    kind: kindMapping[item.kind],
+  }));
+  console.log(formattedPerformance);
 
   return (
     <>
@@ -49,7 +56,7 @@ function Homepage() {
               <ActivityBarChart data={activity} />
               <section className="main__profilSection__profilWrapper__chart__cardWrapper">
                 <AverageSessionsLineChart data={averageSessions} />
-                <PerformanceRadarChart data={performance} />
+                <PerformanceRadarChart data={formattedPerformance} />
                 <ScoreRadialBarChart userData={userData} />
               </section>
             </section>
