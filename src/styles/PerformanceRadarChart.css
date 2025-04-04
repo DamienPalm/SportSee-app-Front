@@ -1,0 +1,7 @@
+.main__profilSection__profilWrapper__performanceRadarChart {
+    width: 260px;
+    height: 264px;
+    background-color: #282d30;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+}

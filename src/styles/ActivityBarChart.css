@@ -1,12 +1,12 @@
-.main__profilSection__profilWrapper__activityBarChart {
+.main__profilSection__profilWrapper__chart__activityBarChart {
     position: relative;
-    width: 832px;
+    width: 100%;
     height: 320px;
     background-color: #fbfbfb;
-    margin-top: 76px;
+    border-radius: 5px;
 }
 
-.main__profilSection__profilWrapper__activityBaraChart__title {
+.main__profilSection__profilWrapper__chart__activityBaraChart__title {
     position: absolute;
     top: 24px;
     left: 32px;

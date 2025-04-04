@@ -3,40 +3,69 @@
     padding-top: 68px;
 }
 
-.main__profilSection__profilWrapper {
-    margin-inline: 88px;
-}
-
-.main__profilSection__profilWrapper__helloSection {
+.main__profilSection__helloSection {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-inline: 88px;
 }
 
-.main__profilSection__profilWrapper__helloSection__userName {
+.main__profilSection__helloSection__userName {
     font-weight: 500;
     font-size: 48px;
     line-height: 24px;
 }
 
-.main__profilSection__profilWrapper__helloSection__userName span {
+.main__profilSection__helloSection__userName span {
     color: red;
 }
 
-.main__profilSection__profilWrapper__helloSection__description {
+.main__profilSection__helloSection__description {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
 }
 
-.main__profilSection__profilWrapper__cardWrapper {
+.main__profilSection__profilWrapper {
     display: flex;
-    gap: 32px;
-    margin-top: 32px;
+    gap: 28px;
+    margin-block: 76px;
+    margin-inline: 88px;
+}
+
+.main__profilSection__profilWrapper__chart {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.main__profilSection__profilWrapper__chart__cardWrapper {
+    display: flex;
+    gap: 28px;
 }
 
 .main__profilSection__profilWrapper__cardKeyDataWrapper {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+@media screen and (max-width: 1300px) {
+    .main__profilSection__helloSection {
+        margin-inline: 44px;
+    }
+
+    .main__profilSection__profilWrapper {
+        flex-direction: column-reverse;
+        margin-inline: 44px;
+    }
+
+    .main__profilSection__profilWrapper__chart__cardWrapper {
+        justify-content: space-between;
+    }
+
+    .main__profilSection__profilWrapper__cardKeyDataWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

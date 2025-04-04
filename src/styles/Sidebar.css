@@ -1,8 +1,10 @@
 .main__sidebar {
     position: fixed;
     width: 116px;
-    height: calc(100vh - 85px);
+    height: 100vh;
     background-color: #020203;
+    top: 0;
+    z-index: -1;
 }
 
 .main__sidebar__buttonWrapper {
