@@ -29,8 +29,8 @@ function CustomizedTooltip({ active, payload }) {
 
 function ActivityBarChart({ data }) {
   return (
-    <div className="main__profilSection__profilWrapper__activityBarChart">
-      <h2 className="main__profilSection__profilWrapper__activityBaraChart__title">
+    <div className="main__profilSection__profilWrapper__chart__activityBarChart">
+      <h2 className="main__profilSection__profilWrapper__chart__activityBaraChart__title">
         Activité quotidienne
       </h2>
       <ResponsiveContainer width="100%" height="100%">
