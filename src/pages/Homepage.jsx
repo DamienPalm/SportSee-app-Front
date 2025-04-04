@@ -33,7 +33,6 @@ function Homepage() {
     ...item,
     kind: kindMapping[item.kind],
   }));
-  console.log(formattedPerformance);
 
   return (
     <>
