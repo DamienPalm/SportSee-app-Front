@@ -1,3 +1,14 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+    top: 0;
+}
+
+.main {
+    margin-top: 85px;
+}
+
 .main__profilSection {
     margin-left: 116px;
     padding-top: 68px;
