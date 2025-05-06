@@ -11,6 +11,14 @@ import PerformanceRadarChart from "../components/PerformanceRadarChart";
 import { useUserPerformance } from "../hooks/useUserPerformance";
 import ScoreRadialBarChart from "../components/ScoreRadialBarChart";
 import Card from "../components/Card";
+
+// Mock data
+import mockUserData from "../mock/userData.json";
+import mockUserActivity from "../mock/userActivity.json";
+import mockUserAverageSessions from "../mock/userAverageSession.json";
+import mockUserPerformance from "../mock/userPerformance.json";
+
+// Icons
 import calorieIcon from "../assets/img/calories-icon.svg";
 import proteinIcon from "../assets/img/protein-icon.svg";
 import carbIcon from "../assets/img/carbs-icon.svg";
@@ -18,10 +26,11 @@ import lipidIcon from "../assets/img/fat-icon.svg";
 
 function Homepage() {
   const [userId] = useState(18);
-  const { userData } = useUserData(userId);
-  const { userActivity } = useUserActivity(userId);
-  const { userAverageSessions } = useUserAverageSessions(userId);
-  const { userPerformance } = useUserPerformance(userId);
+  const { userData = mockUserData } = useUserData(userId);
+  const { userActivity = mockUserActivity } = useUserActivity(userId);
+  const { userAverageSessions = mockUserAverageSessions } =
+    useUserAverageSessions(userId);
+  const { userPerformance = mockUserPerformance } = useUserPerformance(userId);
 
   const firstName = userData?.data?.userInfos?.firstName;
   const activity = userActivity?.data?.sessions;

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchUserActivity } from "../services/api";
+import { fetchWithFallback } from "../services/fetchWithFallback";
+import mockUserActivity from "../mock/userActivity.json";
 
 export function useUserActivity(userId) {
   const [userActivity, setUserActivity] = useState(null);
@@ -8,7 +10,7 @@ export function useUserActivity(userId) {
 
   useEffect(() => {
     setLoading(true);
-    fetchUserActivity(userId)
+    fetchWithFallback(() => fetchUserActivity(userId), mockUserActivity)
       .then((userActivity) => setUserActivity(userActivity))
       .catch((error) => setError(error))
       .finally(() => setLoading(false));

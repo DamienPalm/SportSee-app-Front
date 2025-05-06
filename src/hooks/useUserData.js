@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchUserData } from "../services/api.js";
+import { fetchWithFallback } from "../services/fetchWithFallback.js";
+import mockUserData from "../mock/userData.json";
 
 export function useUserData(userId) {
   const [userData, setUserData] = useState(null);
@@ -8,9 +10,9 @@ export function useUserData(userId) {
 
   useEffect(() => {
     setLoading(true);
-    fetchUserData(userId)
-      .then((userData) => setUserData(userData))
-      .catch((error) => setError(error))
+    fetchWithFallback(() => fetchUserData(userId), mockUserData)
+      .then((data) => setUserData(data))
+      .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, [userId]);
 

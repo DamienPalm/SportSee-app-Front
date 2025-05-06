@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchUserAverageSessions } from "../services/api";
+import { fetchWithFallback } from "../services/fetchWithFallback";
+import mockUserAverageSessions from "../mock/userAverageSession.json";
 
 export function useUserAverageSessions(userId) {
   const [userAverageSessions, setUserAverageSessions] = useState(null);
@@ -8,7 +10,10 @@ export function useUserAverageSessions(userId) {
 
   useEffect(() => {
     setLoading(true);
-    fetchUserAverageSessions(userId)
+    fetchWithFallback(
+      () => fetchUserAverageSessions(userId),
+      mockUserAverageSessions
+    )
       .then((userAverageSessions) =>
         setUserAverageSessions(userAverageSessions)
       )
