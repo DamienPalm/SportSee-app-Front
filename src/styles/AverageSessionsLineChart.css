@@ -5,6 +5,7 @@
     background-color: red;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
     border-radius: 5px;
+    flex: 1;
 }
 
 .main__profilSection__profilWrapper__averageSessionsLineChart__title {

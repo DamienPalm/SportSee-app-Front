@@ -1,9 +1,9 @@
 .main__profilSection__profilWrapper__cardKeyDataWrapper__card {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 10%;
     background-color: #fbfbfb;
-    padding: 32px;
+    padding: 14%;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
     border-radius: 5px;
 }

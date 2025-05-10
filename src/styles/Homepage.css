@@ -39,44 +39,31 @@
 
 .main__profilSection__profilWrapper {
     display: flex;
-    gap: 28px;
+    gap: 2%;
     margin-block: 76px;
-    margin-inline: 88px;
+    margin-inline: 6%;
 }
 
 .main__profilSection__profilWrapper__chart {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    flex-grow: 2;
+    gap: 4%;
+    max-width: 836px;
+    width: calc(100% * 2/3);
+    justify-content: space-between;
 }
 
 .main__profilSection__profilWrapper__chart__cardWrapper {
     display: flex;
-    gap: 28px;
+    gap: 3%;
 }
 
 .main__profilSection__profilWrapper__cardKeyDataWrapper {
     display: flex;
     flex-direction: column;
     gap: 40px;
-}
-
-@media screen and (max-width: 1300px) {
-    .main__profilSection__helloSection {
-        margin-inline: 44px;
-    }
-
-    .main__profilSection__profilWrapper {
-        flex-direction: column-reverse;
-        margin-inline: 44px;
-    }
-
-    .main__profilSection__profilWrapper__chart__cardWrapper {
-        justify-content: space-between;
-    }
-
-    .main__profilSection__profilWrapper__cardKeyDataWrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+    max-width: 220px;
+    width: 100%;
+    justify-content: space-between;
 }
